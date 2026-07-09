@@ -71,17 +71,49 @@ color: var(--purple);
 }
 
 .navbar {
-display: flex;
-gap: 25px;
+  display: flex;
+  gap: 10px;
 }
 
 .navbar a {
-color: var(--muted);
-font-size: 0.9rem;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 30px;
+  color: var(--text);
+  display: flex;
+  gap: 0;
+  height: 42px;
+  overflow: hidden;
+  padding: 0 13px;
+  transition: 0.35s ease;
+}
+
+.menu-icon {
+  color: var(--blue);
+  font-size: 1.1rem;
+  min-width: 16px;
+  text-align: center;
+}
+
+.menu-text {
+  max-width: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-width 0.35s ease, opacity 0.25s ease, margin 0.35s ease;
+  white-space: nowrap;
 }
 
 .navbar a:hover {
-color: var(--blue);
+  background: rgba(141, 92, 255, 0.25);
+  border-color: var(--purple);
+  box-shadow: 0 8px 22px rgba(141, 92, 255, 0.25);
+}
+
+.navbar a:hover .menu-text {
+  margin-left: 9px;
+  max-width: 100px;
+  opacity: 1;
 }
 
 .hero {
